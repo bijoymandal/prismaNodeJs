@@ -1,0 +1,28 @@
+step:1
+    exists file existing npm or not //npm init -y
+step:2
+    node module and typescript install using prisma
+    npm i --save-dev prisma typescript ts-node @types/node nodemon
+step:3
+    prisma install on folder
+    npx prisma init
+step:4
+    existing database install migration file
+    npm prisma init --datasource-provider postgresql // database name ex: mysql, sql server,
+step:5
+    connect database 
+    npx prisma migration dev --name init
+step:6
+    install system prisma client package
+    npm i @prisma/client
+step:7
+    package.json file change as a scripts 
+    ex:  "devStart": "nodemon script.ts" // "name":"nodemon filename.ts(script.ts)"
+    npm run devStart
+step:8
+    generate prisma client header file
+    npx prisma generate
+    npm run devStart
+step:9
+    properly migration file create and work on scripts
+    npx prisma migrate dev --name init
